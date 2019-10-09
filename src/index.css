@@ -1,13 +1,77 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
+  }
+  
+ul {
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+  background-color: lightblue;
+  padding: 30px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+li {
+  padding: 10px;
 }
+
+a {
+text-decoration: none;
+color: white;
+font-size: 1.4em;
+}
+
+.active {
+  text-decoration: none;
+  color: darkblue;
+}
+.cards{
+ padding-top: 30px;
+}
+
+.dataCard {
+  display: inline-block;
+  height: 480px;
+  width: 330px;
+  margin: 20px;
+  background-color: grey;
+  padding: 15px;
+  color: white;
+  border-radius: 8px;
+  vertical-align: top;
+}
+
+img {
+  width: 100%;
+  height: 300px;
+}
+
+.button {
+  width: 30%;
+  padding: 8px;
+  background-color: darkblue;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.button a {
+  font-size: 1em;
+}
+
+.details {
+  display: flex;
+  padding: 50px 0 0 40px;
+}
+
+.details img {
+  flex:1;
+  width: 100px;
+  height: 300px;
+  margin-right: 60px;
+}
+
+.texts {
+  flex: 2;
+}
+

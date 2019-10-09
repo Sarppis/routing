@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "title": "Baana",
+    "text": "The Helsinki harbour rail line (Finnish: Helsingin satamarata) was a side rail track in Helsinki and dismantled in 2009.",
+    "photo": "./img/img_1.png"
+  },
+  {
+    "id":2,
+    "title": "Watching",
+    "text": "To be alertly on the lookout, look attentively, or observe, as to see what comes, is done, or happens.",
+    "photo": "./img/img_2.png"
+
+  },
+  {
+    "id":3,
+    "title": "Bunny",
+    "text": "The child was told that the bunny has poor attention and that the bunny might have to be told what had just happened.",
+    "photo": "./img/img_3.png"
+  }
+]

@@ -1,12 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { Route, NavLink, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Users from './users';
+import Gallery from './gallery';
+import Notfound from './notfound';
+import ReadMore from './readmore';
+import InfoList from './InfoList';
+import InfoData from './cards.json';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const routing = (
+  <Router>
+    <div>
+      <div className="nav">
+        <ul>
+          <li>
+            <NavLink exact activeClassName="active" to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink exact activeClassName="active" to="/users">Users</NavLink>
+          </li>
+          <li>
+            <NavLink exact activeClassName="active" to="/gallery">Gallery</NavLink>
+          </li>
+          <li>
+            <NavLink exact activeClassName="active" to="/contact">BC</NavLink>
+          </li>
+        </ul>
+      </div>
+      <Switch>
+        <Route exact path="/" component={InfoList} />
+        <Route path="/users/" component={Users} />
+        <Route path="/gallery/" component={Gallery} />
+        <Route path="/contact" component={() => window.location = 'http://bc.fi'} />
+        <Route path="/:postId" render={props => <ReadMore data={InfoData} {...props} />} />
+        <Route component={Notfound} />
+      </Switch>
+    </div>
+  </Router>
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(routing, document.getElementById('root'))
